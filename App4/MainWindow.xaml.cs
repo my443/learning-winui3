@@ -40,25 +40,27 @@ namespace App4
 		{
 			List<Project> Projects = new List<Project>();
 
-			Project newProject = new Project();
-			newProject.Name = "Project 1";
-			newProject.Activities.Add(new Activity()
-			{ Name = "Activity 1", Complete = true, DueDate = startDate.AddDays(4) });
-			newProject.Activities.Add(new Activity()
-			{ Name = "Activity 2", Complete = true, DueDate = startDate.AddDays(5) });
-			Projects.Add(newProject);
+			for (int i = 0; i < 10; i++) { 
+				Project newProject = new Project();
+				newProject.Name = "Project " + i.ToString();
+				newProject.Activities.Add(new Activity()
+				{ Name = "Activity 1 for Project "+i.ToString(), Complete = true, DueDate = startDate.AddDays(4) });
+				newProject.Activities.Add(new Activity()
+				{ Name = "Activity 2 for Project "+i.ToString(), Complete = true, DueDate = startDate.AddDays(5) });
+				Projects.Add(newProject);
+			}
 
-			newProject = new Project();
-			newProject.Name = "Project 2";
-			newProject.Activities.Add(new Activity()
-			{ Name = "Activity A", Complete = true, DueDate = startDate.AddDays(2) });
-			newProject.Activities.Add(new Activity()
-			{ Name = "Activity B", Complete = false, DueDate = startDate.AddDays(3) });
-			Projects.Add(newProject);
+			//newProject = new Project();
+			//newProject.Name = "Project 2";
+			//newProject.Activities.Add(new Activity()
+			//{ Name = "Activity A", Complete = true, DueDate = startDate.AddDays(2) });
+			//newProject.Activities.Add(new Activity()
+			//{ Name = "Activity B", Complete = false, DueDate = startDate.AddDays(3) });
+			//Projects.Add(newProject);
 
-			newProject = new Project();
-			newProject.Name = "Project 3";
-			Projects.Add(newProject);
+			//newProject = new Project();
+			//newProject.Name = "Project 3";
+			//Projects.Add(newProject);
 
 			cvsProjects.Source = Projects;
 		}

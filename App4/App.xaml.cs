@@ -36,6 +36,7 @@ namespace App4
 		public App()
 		{
 			this.InitializeComponent();
+			DataAccess mydata = new DataAccess();
 		}
 
 		/// <summary>

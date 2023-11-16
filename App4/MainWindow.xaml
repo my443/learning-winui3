@@ -32,7 +32,7 @@
                         </StackPanel>
                     </DataTemplate>
                 </GridView.ItemTemplate>
-                
+
                 <!--<GridView.ItemsPanel>
                     <ItemsPanelTemplate>
                         <ItemsWrapGrid MaximumRowsOrColumns="3"/>
@@ -52,7 +52,7 @@
                         </GroupStyle.HeaderTemplate>
                     </GroupStyle>
                 </GridView.GroupStyle>-->
-
+               
                 <GridView.Header>
                     <GridViewHeaderItem>
                         <StackPanel Orientation="Horizontal" >
@@ -74,10 +74,11 @@
                                            Style="{StaticResource BodyTextBlockStyle}"
                                            MinWidth="50"/>
                             </Grid>
-     
+
                         </StackPanel>
-                    </GridViewHeaderItem>                    
+                    </GridViewHeaderItem>
                 </GridView.Header>
+              
             </GridView>
         </Grid>
 
