@@ -52,6 +52,32 @@
                         </GroupStyle.HeaderTemplate>
                     </GroupStyle>
                 </GridView.GroupStyle>-->
+
+                <GridView.Header>
+                    <GridViewHeaderItem>
+                        <StackPanel Orientation="Horizontal" >
+                            <Grid Background="LightGray" Margin="0">
+                                <TextBlock Text='Activity' 
+                                           Foreground="Black" Margin="12"
+                                           Style="{StaticResource BodyTextBlockStyle}"
+                                           MinWidth="300"/>
+                            </Grid>
+                            <Grid Background="LightGray" Margin="0">
+                                <TextBlock Text='Column2' 
+                                           Foreground="Black" Margin="12"
+                                           Style="{StaticResource BodyTextBlockStyle}"
+                                           MinWidth="300"/>
+                            </Grid>
+                            <Grid Background="LightGray" Margin="0">
+                                <TextBlock Text='Column3' 
+                                           Foreground="Black" Margin="12"
+                                           Style="{StaticResource BodyTextBlockStyle}"
+                                           MinWidth="50"/>
+                            </Grid>
+     
+                        </StackPanel>
+                    </GridViewHeaderItem>                    
+                </GridView.Header>
             </GridView>
         </Grid>
 
