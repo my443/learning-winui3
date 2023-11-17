@@ -15,11 +15,45 @@
                               ItemsPath="Activities"/>
         </Page.Resources>
 
-        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-            <GridView ItemsSource="{Binding Source={StaticResource cvsProjects}}" MaxHeight="500">
-                <GridView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal" Margin="20" Height="20">
+
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="Auto">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" >
+                <Grid Background="LightGray" Margin="0">
+                    <TextBlock Text='Activity' 
+                       Foreground="Black" Margin="12"
+                       Style="{StaticResource BodyTextBlockStyle}"
+                       MinWidth="300"/>
+                </Grid>
+                <Grid Background="LightGray" Margin="0">
+                    <TextBlock Text='Column2' 
+                       Foreground="Black" Margin="12"
+                       Style="{StaticResource BodyTextBlockStyle}"
+                       MinWidth="300"/>
+                </Grid>
+                <Grid Background="LightGray" Margin="0">
+                    <TextBlock Text='Column3' 
+                       Foreground="Black" Margin="12"
+                       Style="{StaticResource BodyTextBlockStyle}"
+                       MinWidth="50"/>
+                </Grid>
+            </StackPanel>
+
+            <GridView ItemsSource="{Binding Source={StaticResource cvsProjects}}" 
+                      Height="Auto" 
+                      Width="Auto" 
+                      IsItemClickEnabled="True"
+                      ItemClick="ContentGridView_ItemClick" >
+                <GridView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid x:Name="MaxItemsWrapGrid"
+                           MaximumRowsOrColumns="1"
+                           Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </GridView.ItemsPanel>
+
+                <GridView.ItemTemplate >
+                    <DataTemplate >
+                        <StackPanel Orientation="Horizontal" Margin="20" Height="20" VerticalAlignment="Stretch">
                             <TextBlock Text="{Binding Name}" FontWeight="Bold" 
                                    Style="{StaticResource BaseTextBlockStyle}"
                                    MinWidth="300"/>
@@ -52,8 +86,8 @@
                         </GroupStyle.HeaderTemplate>
                     </GroupStyle>
                 </GridView.GroupStyle>-->
-               
-                <GridView.Header>
+
+                <!--<GridView.Header>
                     <GridViewHeaderItem>
                         <StackPanel Orientation="Horizontal" >
                             <Grid Background="LightGray" Margin="0">
@@ -74,12 +108,12 @@
                                            Style="{StaticResource BodyTextBlockStyle}"
                                            MinWidth="50"/>
                             </Grid>
-
                         </StackPanel>
                     </GridViewHeaderItem>
-                </GridView.Header>
-              
+                </GridView.Header>-->
+
             </GridView>
+
         </Grid>
 
 

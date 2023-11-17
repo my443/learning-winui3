@@ -16,6 +16,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using static System.Net.Mime.MediaTypeNames;
 
 
 // To learn more about WinUI, the WinUI project structure,
@@ -32,7 +33,6 @@ namespace App4
 		public MainWindow()
 		{
 			this.InitializeComponent();
-
 			PopulateProjects();
 		}
 
@@ -64,6 +64,26 @@ namespace App4
 
 			cvsProjects.Source = Projects;
 		}
+
+		public async void ContentGridView_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			ContentDialog dialog = new ContentDialog();
+
+			// XamlRoot must be set in the case of a ContentDialog running in a Desktop app
+			dialog.XamlRoot = this.Content.XamlRoot;
+			//dialog.Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style;
+			dialog.Title = "Save your work?";
+			dialog.PrimaryButtonText = "Save";
+			dialog.SecondaryButtonText = "Don't Save";
+			dialog.CloseButtonText = "Cancel";
+			dialog.DefaultButton = ContentDialogButton.Primary;
+			//dialog.Content = new ContentDialogContent();
+
+			var result = await dialog.ShowAsync();
+
+
+		}
+
 	}
 
 	public class Project

@@ -7,3 +7,6 @@ I will give credit where due if I am able to.
 
 
 * [Gridview XAML](https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.gridview?view=windows-app-sdk-1.4)
+* [Dialog Box Help](https://github.com/microsoft/microsoft-ui-xaml/issues/2504)
+
+**Don't forget to use the WinUI3 Gallery -- It is amazingly helpful!!**
